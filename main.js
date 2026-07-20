@@ -372,7 +372,7 @@ function initWebGLBackground(){
     galaxyMat.uniforms.uStarSpeed.value = (t * GALAXY_STAR_SPEED) / 10.0;
     smoothMouseActive += (targetMouseActive - smoothMouseActive) * 0.05;
     galaxyMat.uniforms.uMouseActiveFactor.value = smoothMouseActive;
-    if(burstT > 0){ burstT -= 0.02; galaxyMat.uniforms.uBurst.value = Math.max(0, burstT); }
+    if(burstT > 0){ burstT -= 0.005; galaxyMat.uniforms.uBurst.value = Math.max(0, burstT); }
 
     targetX += (mouseNX - targetX) * 0.035;
     targetY += (mouseNY - targetY) * 0.035;
@@ -403,7 +403,7 @@ function initWebGLBackground(){
   }
   document.addEventListener('visibilitychange', ()=> document.hidden ? stop() : start());
 
-  function burst(){ burstT = 1; }
+  function burst(){ burstT = 2; }
 
   start();
   return { start, stop, burst };
