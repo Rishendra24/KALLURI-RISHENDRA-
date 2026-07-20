@@ -1,0 +1,13 @@
+{
+  "name": "Kalluri Rishendra — Portfolio",
+  "short_name": "Rishendra",
+  "description": "Portfolio of Kalluri Rishendra, Computer Science undergraduate and full-stack developer.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#050311",
+  "theme_color": "#050311",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

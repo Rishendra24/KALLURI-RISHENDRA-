@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Kalluri Rishendra — Computer Science Student & Full Stack Developer</title>
+<meta name="description" content="Portfolio of Kalluri Rishendra, a Computer Science undergraduate at SRM University AP specializing in full-stack web development, Python/C++, and applied machine learning.">
+<meta name="theme-color" content="#050311">
+<link rel="canonical" href="https://example.com/">
+<!-- NOTE: replace example.com above with the real domain once this site is deployed. -->
+
+<!-- Favicons -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kalluri Rishendra — Computer Science Student & Full Stack Developer">
+<meta property="og:description" content="Portfolio of Kalluri Rishendra, a Computer Science undergraduate at SRM University AP specializing in full-stack web development, Python/C++, and applied machine learning.">
+<meta property="og:image" content="social-preview.png">
+<meta property="og:url" content="https://example.com/">
+<meta property="og:site_name" content="Kalluri Rishendra">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kalluri Rishendra — Computer Science Student & Full Stack Developer">
+<meta name="twitter:description" content="Portfolio of Kalluri Rishendra, a Computer Science undergraduate at SRM University AP specializing in full-stack web development, Python/C++, and applied machine learning.">
+<meta name="twitter:image" content="social-preview.png">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Kalluri Rishendra",
+  "jobTitle": "Computer Science Undergraduate",
+  "url": "https://example.com/",
+  "email": "mailto:rishendrakalluri24@gmail.com",
+  "sameAs": [
+    "https://github.com/Rishendra24",
+    "https://linkedin.com/in/rishendra-kalluri"
+  ],
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "SRM University AP"
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- CINEMATIC INTRO -->
+<div id="intro">
+  <canvas id="intro-canvas"></canvas>
+  <div class="intro-word" data-i="0">CREATE</div>
+  <div class="intro-word" data-i="1">INNOVATE</div>
+  <div class="intro-word" data-i="2">DESIGN</div>
+  <div class="intro-word" data-i="3">BUILD</div>
+  <div class="intro-word" data-i="4">INSPIRE</div>
+  <div class="intro-mark">KALLURI RISHENDRA — PORTFOLIO</div>
+  <button class="intro-skip" id="intro-skip">Skip intro ↵</button>
+  <div class="intro-progress" id="intro-progress-bar"></div>
+</div>
+
+<div id="webgl-bg" aria-hidden="true"></div>
+<div id="bg-scrim" aria-hidden="true"></div>
+
+<div class="cursor-dot" id="cursor-dot"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+<div id="egg-toast" role="status" aria-live="polite">🎉 Easter egg found — you know your Konami code.</div>
+<div id="toast2" role="status" aria-live="polite">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+  <span id="toast2-text"></span>
+</div>
+<div id="scroll-progress2"></div>
+<div id="nav-backdrop"></div>
+
+<header id="site-header">
+  <div class="container nav-inner">
+    <button class="logo" id="logo-btn" data-target="hero-section">Rishendra<span class="dot" aria-hidden="true">.</span></button>
+    <nav class="nav-links" id="nav-links" aria-label="Primary">
+      <button class="nav-link glow-on-hover active" data-target="hero-section">Home</button>
+      <button class="nav-link glow-on-hover" data-target="about">About</button>
+      <button class="nav-link glow-on-hover" data-target="projects">Work</button>
+      <button class="nav-link glow-on-hover" data-target="skills">Skills</button>
+      <button class="nav-link glow-on-hover" data-target="experience">Experience</button>
+      <button class="nav-link glow-on-hover" data-target="certifications">Certifications</button>
+      <button class="nav-link glow-on-hover" data-target="contact">Contact</button>
+    </nav>
+    <button id="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <section id="hero-section">
+    <div class="pc-card-wrapper" id="profile-card">
+      <div class="pc-behind"></div>
+      <div class="pc-card-shell">
+        <section class="pc-card">
+          <div class="pc-inside">
+            <div class="pc-shine"></div>
+            <div class="pc-glare"></div>
+            <div class="pc-content pc-avatar-content">
+              <img class="avatar" id="profile-avatar" alt="Kalluri Rishendra avatar" loading="lazy">
+              <div class="pc-user-info">
+                <div class="pc-user-details">
+                  <div class="pc-mini-avatar"><img id="profile-mini-avatar" alt="Kalluri Rishendra mini avatar" loading="lazy"></div>
+                  <div class="pc-user-text">
+                    <div class="pc-handle">@Rishendra24</div>
+                    <div class="pc-status">Open to internships</div>
+                  </div>
+                </div>
+                <button class="pc-contact-btn" type="button" id="profile-contact-btn">Contact Me</button>
+              </div>
+            </div>
+            <div class="pc-content">
+              <div class="pc-details">
+                <h1>Kalluri Rishendra</h1>
+                <p>Computer Science Undergraduate</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div class="hero-resume-cta">
+      <a class="btn2 btn2-outline" href="resume.pdf" download="Kalluri_Rishendra_Resume.pdf" id="resume-download-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg>
+        Download Resume
+      </a>
+    </div>
+  </section>
+
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee-track" id="marquee">
+      <span class="marquee-item">Full-Stack Development<span class="mdot">✦</span></span>
+      <span class="marquee-item">Machine Learning<span class="mdot">✦</span></span>
+      <span class="marquee-item">Python &amp; C++<span class="mdot">✦</span></span>
+      <span class="marquee-item">React &amp; Node.js<span class="mdot">✦</span></span>
+      <span class="marquee-item">Flask &amp; Django<span class="mdot">✦</span></span>
+      <span class="marquee-item">Open Source<span class="mdot">✦</span></span>
+      <span class="marquee-item">Full-Stack Development<span class="mdot">✦</span></span>
+      <span class="marquee-item">Machine Learning<span class="mdot">✦</span></span>
+      <span class="marquee-item">Python &amp; C++<span class="mdot">✦</span></span>
+      <span class="marquee-item">React &amp; Node.js<span class="mdot">✦</span></span>
+      <span class="marquee-item">Flask &amp; Django<span class="mdot">✦</span></span>
+      <span class="marquee-item">Open Source<span class="mdot">✦</span></span>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">~/about</span>
+        <h2>Computer Science undergraduate,<br class="hide-mobile"> builder at heart.</h2>
+        <p>A quick summary and where I study.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal reveal-delay-1">
+          <p>Computer Science undergraduate with hands-on experience building full-stack web applications and system-monitoring tools. Skilled in <strong>C, C++, and Python</strong> with a strong foundation in problem-solving. Seeking an internship or entry-level role to contribute to real-world software products.</p>
+          <div class="edu-card card">
+            <div class="deg">B.Tech. in Computer Science and Engineering</div>
+            <div class="inst">SRM University AP — Amaravathi, AP, India</div>
+            <div class="meta">Aug 2024 – May 2028 · Cumulative GPA: 7.0/10 (through 4th semester)</div>
+          </div>
+          <div class="chip-row">
+            <span class="tag2">English — Fluent</span>
+            <span class="tag2">Telugu — Native</span>
+            <span class="tag2">Hindi — Conversational</span>
+          </div>
+          <div class="chip-row">
+            <span class="tag2">AI Prompting &amp; LLM Exploration</span>
+            <span class="tag2">Open Source</span>
+            <span class="tag2">Gaming</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <div class="reveal projects-head-row">
+        <div class="section-head section-head--tight">
+          <span class="eyebrow">~/work</span>
+          <h2>Things I've built</h2>
+          <p>Drag to scroll, or use the arrows.</p>
+        </div>
+        <div class="track-nav2">
+          <button class="track-btn2" id="track-prev" aria-label="Scroll projects left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <button class="track-btn2" id="track-next" aria-label="Scroll projects right"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+        </div>
+      </div>
+      <div class="projects-track-wrap2">
+        <div class="projects-track2 reveal reveal-delay-1" id="proj-track"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">~/skills</span>
+        <h2>Tools I work with</h2>
+        <p>Languages, frameworks and tools from my coursework and projects.</p>
+      </div>
+      <div id="skills-cols"></div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">~/experience</span>
+        <h2>Where I've worked</h2>
+        <p>Internship experience so far.</p>
+      </div>
+      <div class="timeline2" id="timeline2"></div>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">~/certifications</span>
+        <h2>Certifications</h2>
+        <p>Credentials backing up the skills above.</p>
+      </div>
+      <div class="cert-grid2" id="cert-grid2"></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">~/contact</span>
+        <h2>Let's talk</h2>
+        <p>Open to internships, entry-level roles, and interesting conversations.</p>
+      </div>
+      <div class="contact-grid2">
+        <div class="contact-info reveal">
+          <div class="contact-line2"><span class="ic2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg></span><a href="mailto:rishendrakalluri24@gmail.com" id="contact-email-link">rishendrakalluri24@gmail.com</a></div>
+          <div class="contact-line2"><span class="ic2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.362 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></span><a href="tel:+919030536659" id="contact-tel-link">+91-9030536659</a></div>
+          <div class="contact-line2"><span class="ic2"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a2 2 0 11-4-.02 2 2 0 014 .02zM3.3 8.75h3.6V21H3.3V8.75zm6.35 0h3.45v1.68h.05c.48-.9 1.65-1.86 3.4-1.86 3.64 0 4.3 2.4 4.3 5.5V21h-3.6v-6.24c0-1.49-.03-3.4-2.07-3.4-2.08 0-2.4 1.62-2.4 3.29V21h-3.6V8.75z"/></svg></span><a href="https://linkedin.com/in/rishendra-kalluri" target="_blank" rel="noopener">linkedin.com/in/rishendra-kalluri</a></div>
+          <div class="contact-line2"><span class="ic2"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.26-.45-1.29.1-2.69 0 0 .84-.27 2.75 1.02a9.4 9.4 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.4.2 2.43.1 2.69.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85V21c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg></span><a href="https://github.com/Rishendra24" target="_blank" rel="noopener">github.com/Rishendra24</a></div>
+          <div class="social-row2">
+            <a href="https://github.com/Rishendra24" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.26-.45-1.29.1-2.69 0 0 .84-.27 2.75 1.02a9.4 9.4 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.4.2 2.43.1 2.69.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85V21c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg></a>
+            <a href="https://linkedin.com/in/rishendra-kalluri" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a2 2 0 11-4-.02 2 2 0 014 .02zM3.3 8.75h3.6V21H3.3V8.75zm6.35 0h3.45v1.68h.05c.48-.9 1.65-1.86 3.4-1.86 3.64 0 4.3 2.4 4.3 5.5V21h-3.6v-6.24c0-1.49-.03-3.4-2.07-3.4-2.08 0-2.4 1.62-2.4 3.29V21h-3.6V8.75z"/></svg></a>
+            <a href="mailto:rishendrakalluri24@gmail.com" aria-label="Email" id="social-email-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg></a>
+          </div>
+        </div>
+        <form class="contact-form glass reveal reveal-delay-1" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="field"><label for="f-name">Name</label><input type="text" id="f-name" name="name" required autocomplete="name"></div>
+            <div class="field"><label for="f-email">Email</label><input type="email" id="f-email" name="email" required autocomplete="email"></div>
+          </div>
+          <div class="field"><label for="f-subject">Subject</label><input type="text" id="f-subject" name="subject" required></div>
+          <div class="field"><label for="f-message">Message</label><textarea id="f-message" name="message" required></textarea></div>
+          <button type="submit" class="btn2 btn2-primary btn2--block" id="form-submit">Send Message</button>
+          <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner2">
+    <p>Designed &amp; developed by <strong>Kalluri Rishendra</strong> · © <span id="year"></span></p>
+    <button id="back-to-top2" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
