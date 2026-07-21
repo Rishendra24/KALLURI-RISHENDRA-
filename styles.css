@@ -108,6 +108,21 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   opacity:0;transition:all .5s var(--ease);pointer-events:none;
 }
 #egg-toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+.rocket-egg{
+  position:fixed;left:50%;bottom:-80px;font-size:38px;z-index:19998;pointer-events:none;
+  transform:translateX(-50%) rotate(0deg);
+  animation:rocketLaunch 2.2s cubic-bezier(.3,0,.2,1) forwards;
+}
+@keyframes rocketLaunch{
+  0%{bottom:-80px;transform:translateX(-50%) translateX(0) rotate(-8deg);opacity:1;}
+  15%{transform:translateX(-50%) translateX(18px) rotate(6deg);}
+  35%{transform:translateX(-50%) translateX(-16px) rotate(-6deg);}
+  55%{transform:translateX(-50%) translateX(14px) rotate(5deg);}
+  100%{bottom:110%;transform:translateX(-50%) translateX(0) rotate(-4deg);opacity:0;}
+}
+@media (prefers-reduced-motion:reduce){
+  .rocket-egg{animation:none;display:none;}
+}
 
 /* ============================================================
    4b. LAYOUT UTILITIES + CONTENT SECTIONS
