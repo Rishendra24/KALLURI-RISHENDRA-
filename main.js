@@ -72,6 +72,42 @@ function triggerEasterEgg(){
   setTimeout(()=> eggToast.classList.remove('show'), 3200);
   if(webglBg && webglBg.burst) webglBg.burst();
 }
+/* ============================================================
+   2b. "TYPE ROCKET" EASTER EGG
+   ============================================================ */
+let rocketBuffer = '';
+document.addEventListener('keydown', e=>{
+  const tag = (document.activeElement?.tagName || '').toLowerCase();
+  if(tag === 'input' || tag === 'textarea') return; // don't hijack typing in the contact form
+  if(e.key.length !== 1) return; // ignore Shift, Enter, arrows, etc.
+
+  rocketBuffer = (rocketBuffer + e.key.toLowerCase()).slice(-6);
+  if(rocketBuffer === 'rocket'){
+    launchRocketEgg();
+    rocketBuffer = '';
+  }
+});
+
+function launchRocketEgg(){
+  const rocket = document.createElement('div');
+  rocket.className = 'rocket-egg';
+  rocket.textContent = '🚀';
+  rocket.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(rocket);
+  rocket.addEventListener('animationend', () => rocket.remove());
+  setTimeout(() => rocket.remove(), 2500); // safety net if reduced-motion skips the animation
+
+  const eggToast = document.getElementById('egg-toast');
+  const original = eggToast.textContent;
+  eggToast.textContent = '🚀 Liftoff! You found the second easter egg.';
+  eggToast.classList.add('show');
+  setTimeout(() => {
+    eggToast.classList.remove('show');
+    setTimeout(() => { eggToast.textContent = original; }, 500);
+  }, 3200);
+
+  if(webglBg && webglBg.burst) webglBg.burst();
+}
 
 /* ============================================================
    3. WEBGL SPACE BACKGROUND — starfield, nebula, wireframe core
